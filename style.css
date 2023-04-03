@@ -1,0 +1,159 @@
+/*
+- Soft blue: hsl(215, 51%, 70%)
+- Cyan: hsl(178, 100%, 50%)
+
+### Neutral
+
+- Very dark blue (main BG): hsl(217, 54%, 11%)
+- Very dark blue (card BG): hsl(216, 50%, 16%)
+- Very dark blue (line): hsl(215, 32%, 27%)
+- White: hsl(0, 0%, 100%)
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(217, 54%, 11%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.container {
+  width: 350px;
+  font-family: "Outfit", sans-serif;
+  background-color: hsl(216, 50%, 16%);
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.photo {
+  max-width: 100%;
+  border-radius: 10px;
+}
+.container h1 {
+  color: hsl(0, 0%, 100%);
+  text-align: left;
+  font-size: 20px;
+  margin: 16px 0;
+  font-weight: 400;
+}
+.container p {
+  color: hsl(215, 51%, 70%);
+  font-size: 16px;
+  margin-bottom: 24px;
+  line-height: 24px;
+  font-weight: 300;
+}
+
+.price-clock {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid hsl(215, 32%, 27%);
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  color: hsl(178, 100%, 50%);
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.price img {
+  margin-right: 5px;
+}
+
+.clock {
+  display: flex;
+  color: hsl(215, 51%, 70%);
+  align-items: center;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.clock img {
+  margin-right: 5px;
+}
+
+.creator {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  letter-spacing: 1px;
+  color: hsl(215, 51%, 70%);
+}
+
+.avatar {
+  height: 30px;
+  width: 30px;
+  border: 1px solid hsl(0, 0%, 100%);
+  border-radius: 100px;
+  margin-right: 10px;
+}
+.creator span {
+  margin-left: 5px;
+  color: hsl(0, 0%, 100%);
+}
+
+.creator span:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
+
+h1:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
+
+.attribution {
+  font-family: "Outfit", sans-serif;
+  margin-top: 100px;
+  color: hsl(215, 32%, 27%);
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+}
+.attribution a {
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+}
+
+.attribution a:hover {
+  color: hsl(178, 100%, 50%);
+}
+
+.photo-1 {
+  position: relative;
+  border-radius: 10px;
+}
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  background-image: url("../nft-preview-card-component-main/images/icon-view.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.photo-1:hover .icon {
+  opacity: 1;
+}
+.photo-1:hover {
+  background-color: hsl(216, 50%, 16%);
+  opacity: 0.75;
+}
